@@ -1,10 +1,18 @@
+0.14 - 
+
+
+
 0.13 - Fri Jan 21 21:00:23 EST 2005
 
 fix a segfault introduced by 0.12
 
+
+
 0.12 - Thu Jan 20 20:32:01 EST 2005
 
 add glue for the $s->vhost accessor
+
+
 
 0.11 - Mon Jan  3 13:44:07 EST 2005
 
@@ -12,6 +20,8 @@ require mod_perl 1.0 so it won't be attempted to be used with mod_perl
 2.0.
 
 take over the maintenance from Doug.
+
+
 
 0.10 - February 8, 2000
 
