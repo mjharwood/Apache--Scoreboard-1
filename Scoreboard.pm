@@ -168,6 +168,13 @@ Iterating over the list of scoreboard slots is done like so:
      ...
  }
 
+=item server_limit
+
+  $server_limit = $image->server_limit;
+
+same as C<Apache::Constants::HARD_SERVER_LIMIT>, but added for future
+compat with 2.x. Use that method to ease migration to mod_perl 2
+
 =item pids
 
 Returns an array reference of all child pids:
@@ -291,7 +298,7 @@ context it returns floating seconds like Time::HiRes::time()
 
 =item req_time
 
-Returns the time taken to process the request in microseconds:
+Returns the time taken to process the request in milliseconds:
 
  my $req_time = $server->req_time;
 
