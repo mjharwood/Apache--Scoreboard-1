@@ -4,8 +4,13 @@ use strict;
 use constant DEBUG => 0;
 
 BEGIN {
+    use mod_perl;
+    die "mod_perl < 2.0 is required" unless $mod_perl::VERSION < 1.99;
+}
+
+BEGIN {
     no strict;
-    $VERSION = '0.10';
+    $VERSION = '0.11';
     @ISA = qw(DynaLoader);
     if ($ENV{MOD_PERL}) {
 	__PACKAGE__->bootstrap($VERSION);
