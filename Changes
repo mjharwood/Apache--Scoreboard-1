@@ -1,4 +1,9 @@
-0.15 - dev 
+0.15 - Fri Mar 11 18:51:32 EST 2005
+
+use PERL_NO_GET_CONTEXT macro to make the module run faster under
+ithreads-enabled perl
+
+fix req_time doc (returns msec, not usec)
 
 added a new method $image->server_limit, which is the same as
 HARD_SERVER_LIMIT added for future compat with Apache::Scoreboard 2.x.

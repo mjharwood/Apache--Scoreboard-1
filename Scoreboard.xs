@@ -1,3 +1,4 @@
+#define PERL_NO_GET_CONTEXT /* we want efficiency */
 #include "modules/perl/mod_perl.h"
 #include "scoreboard.h"
 
@@ -58,7 +59,7 @@ static void status_flags_init(void)
     status_flags[SERVER_GRACEFUL] = 'G';
 }
 
-static SV *size_string(size_t size)
+static SV *size_string(pTHX_ size_t size)
 {
     SV *sv = newSVpv("    -", 5);
     if (size == (size_t)-1) {
@@ -110,6 +111,12 @@ END()
 SV *
 size_string(size)
     size_t size
+
+    CODE:
+    RETVAL = size_string(aTHX_ size);
+
+    OUTPUT:
+    RETVAL
 
 int
 scoreboard_send(r)
