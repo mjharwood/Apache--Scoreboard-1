@@ -22,6 +22,8 @@ typedef Apache__parent_score * Apache__ParentScore;
 
 typedef scoreboard * Apache__Scoreboard;
 
+#define server_limit(image) HARD_SERVER_LIMIT
+
 #define server_score_status(s)          s->record.status
 #define server_score_access_count(s)    s->record.access_count
 #define server_score_bytes_served(s)    s->record.bytes_served
@@ -162,6 +164,10 @@ image(CLASS)
     OUTPUT:
     RETVAL
 
+int
+server_limit(image)
+    Apache::Scoreboard image
+    
 Apache::ServerScore
 servers(image, idx=0)
     Apache::Scoreboard image

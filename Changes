@@ -1,5 +1,7 @@
 0.15 - dev 
 
+added a new method $image->server_limit, which is the same as
+HARD_SERVER_LIMIT added for future compat with Apache::Scoreboard 2.x.
 
 
 0.14 - Sun Feb 27 22:33:07 EST 2005

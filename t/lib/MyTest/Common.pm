@@ -75,7 +75,9 @@ sub image_is_ok {
         ref($image) eq 'Apache::Scoreboard' &&
         $image->pids &&
         $image->servers(0) &&
-        $image->parent(0)->pid;
+        $image->parent(0)->pid &&
+            # same as HARD_SERVER_LIMIT added for future compat with 2.x
+        $image->server_limit;
 
     return $status;
 }
