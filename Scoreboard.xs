@@ -31,6 +31,7 @@ typedef scoreboard * Apache__Scoreboard;
 #define server_score_conn_count(s)      s->record.conn_count
 #define server_score_client(s)          s->record.client
 #define server_score_request(s)         s->record.request
+#define server_score_vhost(s)           s->record.vhostrec->server_hostname
 
 #define parent_score_pid(s) s->record.pid
 
@@ -352,6 +353,10 @@ char *
 server_score_request(self)
     Apache::ServerScore self
 
+char *
+server_score_vhost(self)
+    Apache::ServerScore self
+    
 MODULE = Apache::Scoreboard   PACKAGE = Apache::ParentScore   PREFIX = parent_score_
 
 void

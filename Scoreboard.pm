@@ -10,7 +10,7 @@ BEGIN {
 
 BEGIN {
     no strict;
-    $VERSION = '0.11';
+    $VERSION = '0.12';
     @ISA = qw(DynaLoader);
     if ($ENV{MOD_PERL}) {
 	__PACKAGE__->bootstrap($VERSION);
@@ -294,6 +294,12 @@ context it returns floating seconds like Time::HiRes::time()
 Returns the time taken to process the request in microseconds:
 
  my $req_time = $server->req_time;
+
+=item vhost
+
+Returns the vhost entry
+
+ my $vhost = $server->vhost;
 
 =back
 

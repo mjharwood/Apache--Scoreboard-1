@@ -16,3 +16,4 @@ examples/scoreboard-mem-usage-png.pl
 examples/scoreboard-cpu-png.pl
 examples/scoreboard-status-png.pl
 lib/Apache/ScoreboardGraph.pm
+META.yml                                 Module meta-data (added by MakeMaker)
