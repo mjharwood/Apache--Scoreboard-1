@@ -32,8 +32,10 @@ typedef scoreboard * Apache__Scoreboard;
 #define server_score_client(s)          s->record.client
 #define server_score_request(s)         s->record.request
 
-#define server_score_vhost(s) \
-    s->record.vhostrec ? s->record.vhostrec->server_hostname : ""
+#define server_score_vhost(s)                           \
+    s->record.vhostrec && ap_scoreboard_image           \
+        ? s->record.vhostrec->server_hostname           \
+        : ""
 
 #define parent_score_pid(s) s->record.pid
 

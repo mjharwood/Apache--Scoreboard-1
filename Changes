@@ -2,10 +2,15 @@
 
 added a live test suite
 
+fix another segfault introduced by 0.12: don't try to resolve vhostrec
+for Apache::DummyScoreboard, since it can only be resolved inside the
+running Apache server (i.e. in the mod_perl script/handler).
+
 
 0.13 - Fri Jan 21 21:00:23 EST 2005
 
-fix a segfault introduced by 0.12
+fix a segfault introduced by 0.12: check whether vhostrec pointer is
+not NULL, before resolving it.
 
 
 
