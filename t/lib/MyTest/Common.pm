@@ -37,7 +37,7 @@ sub test {
     ok $ok;
 
     my $pids = $image->pids;
-    error $pids;
+    #error $pids;
     ok @$pids;
 }
 
