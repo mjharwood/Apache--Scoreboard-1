@@ -19,9 +19,6 @@ my $tests_common = MyTest::Common::num_of_tests();
 plan tests => $tests_local + $tests_common;
 
 my $cfg = Apache::Test::config();
-my $vars = $cfg->{vars};
-
-my $store_file = catfile $vars->{documentroot}, "scoreboard";
 my $hostport = Apache::TestRequest::hostport($cfg);
 my $retrieve_url = "http://$hostport/scoreboard";
 

@@ -1,5 +1,8 @@
 package TestInternal::basic;
 
+use strict;
+use warnings FATAL => 'all';
+
 use Apache::Test;
 use Apache::TestRequest ();
 use Apache::TestTrace;
@@ -14,7 +17,7 @@ use Apache::Constants qw(:common);
 my $tests_local  = 0;
 my $tests_common = MyTest::Common::num_of_tests();
 
-my $store_file = catfile $vars->{documentroot}, "scoreboard";
+my $cfg = Apache::Test::config();
 my $hostport = Apache::TestRequest::hostport($cfg);
 my $retrieve_url = "http://$hostport/scoreboard";
 
