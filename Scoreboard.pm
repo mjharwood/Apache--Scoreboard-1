@@ -3,6 +3,8 @@ package Apache::Scoreboard;
 use strict;
 use constant DEBUG => 0;
 
+use Carp;
+
 BEGIN {
     use mod_perl;
     die "mod_perl < 2.0 is required" unless $mod_perl::VERSION < 1.99;
