@@ -10,7 +10,7 @@ BEGIN {
 
 BEGIN {
     no strict;
-    $VERSION = '0.12';
+    $VERSION = '0.13';
     @ISA = qw(DynaLoader);
     if ($ENV{MOD_PERL}) {
 	__PACKAGE__->bootstrap($VERSION);
