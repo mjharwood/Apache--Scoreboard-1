@@ -1,0 +1,9 @@
+# make sure that we test under Taint mode
+PerlTaintCheck On
+PerlWarn      On
+
+<IfModule mod_status.c>
+    # XXX: can try to loadmodule mod_status if it's not loaded and DSO
+    ExtendedStatus On
+</IfModule>
+

@@ -1,0 +1,6 @@
+
+PerlModule Apache::Scoreboard
+<Location /scoreboard>
+    SetHandler perl-script
+    PerlHandler Apache::Scoreboard::send
+</Location>
