@@ -1,0 +1,144 @@
+#!/usr/bin/perl
+my $lib = "/home/stas/bin/run_check-lib.pl";
+require $lib;
+run_check(*DATA);
+
+__DATA__
+
+#### mp1 DSO ###
+
+perl-5.6.1 Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.6.1.so -port select && make && make test && make install
+
+perl-5.6.1-ithread Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.6.1-ithread.so -port select && make && make test && make install
+
+
+
+perl-5.6.2 Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.6.2.so -port select && make && make test && make install
+
+perl-5.6.2-ithread Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.6.2-ithread.so -port select && make && make test && make install
+
+perl-5.6.2-perlio Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.6.2-perlio.so -port select && make && make test && make install
+
+
+
+perl-5.8.0 Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.0.so -port select && make && make test && make install
+
+perl-5.8.0-ithread Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.0-ithread.so -port select && make && make test && make install
+
+
+
+perl-5.8.1 Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.1.so -port select && make && make test && make install
+
+perl-5.8.1-ithread Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.1-ithread.so -port select && make && make test && make install
+
+
+
+perl-5.8.2 Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.2.so -port select && make && make test && make install
+
+perl-5.8.2-ithread Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.2-ithread.so -port select && make && make test && make install
+
+
+
+perl-5.8.3 Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.3.so -port select && make && make test && make install
+
+perl-5.8.3-ithread Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.3-ithread.so -port select && make && make test && make install
+
+
+
+perl-5.8.4 Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.4.so -port select && make && make test && make install
+
+perl-5.8.4-ithread Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.4-ithread.so -port select && make && make test && make install
+
+
+
+perl-5.8.5 Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.5.so -port select && make && make test && make install
+
+perl-5.8.5-ithread Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.5-ithread.so -port select && make && make test && make install
+
+
+
+perl-5.8.6 Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.6.so -port select && make && make test && make install
+
+perl-5.8.6-ithread Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.6-ithread.so -port select && make && make test && make install
+
+
+
+perl-5.8.7 Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.7.so -port select && make && make test && make install
+
+perl-5.8.7-ithread Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-5.8.7-ithread.so -port select && make && make test && make install
+
+
+
+perl-blead Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-blead.so -port select && make && make test && make install
+
+perl-blead-ithread Makefile.PL -httpd /home/stas/httpd/1.3-dynamic/bin/httpd -libmodperl /home/stas/httpd/1.3-dynamic/libexec/libperl-blead-ithread.so -port select && make && make test && make install
+
+
+#### mp1 static ###
+
+perl-5.6.1 Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.6.1 -port select && make && make test && make install
+
+perl-5.6.1-ithread Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.6.1-ithread -port select && make && make test && make install
+
+
+
+perl-5.6.2 Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.6.2 -port select && make && make test && make install
+
+perl-5.6.2-ithread Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.6.2-ithread -port select && make && make test && make install
+
+perl-5.6.2-perlio Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.6.2-perlio -port select && make && make test && make install
+
+
+
+perl-5.8.0 Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.0 -port select && make && make test && make install
+
+perl-5.8.0-ithread Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.0-ithread -port select && make && make test && make install
+
+
+
+perl-5.8.1 Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.1 -port select && make && make test && make install
+
+perl-5.8.1-ithread Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.1-ithread -port select && make && make test && make install
+
+
+
+perl-5.8.2 Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.2 -port select && make && make test && make install
+
+perl-5.8.2-ithread Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.2-ithread -port select && make && make test && make install
+
+
+
+perl-5.8.3 Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.3 -port select && make && make test && make install
+
+perl-5.8.3-ithread Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.3-ithread -port select && make && make test && make install
+
+
+
+perl-5.8.4 Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.4 -port select && make && make test && make install
+
+perl-5.8.4-ithread Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.4-ithread -port select && make && make test && make install
+
+
+
+perl-5.8.5 Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.5 -port select && make && make test && make install
+
+perl-5.8.5-ithread Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.5-ithread -port select && make && make test && make install
+
+
+
+perl-5.8.6 Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.6 -port select && make && make test && make install
+
+perl-5.8.6-ithread Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.6-ithread -port select && make && make test && make install
+
+
+
+perl-5.8.7 Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.7 -port select && make && make test && make install
+
+perl-5.8.7-ithread Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-5.8.7-ithread -port select && make && make test && make install
+
+
+
+perl-blead Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-blead -port select && make && make test && make install
+
+perl-blead-ithread Makefile.PL -httpd /home/stas/httpd/1.3-static/bin/httpd-blead-ithread -port select && make && make test && make install
+
