@@ -22,15 +22,15 @@ typedef Apache__parent_score * Apache__ParentScore;
 
 typedef scoreboard * Apache__Scoreboard;
 
-#define server_score_status(s) s->record.status
-#define server_score_access_count(s) s->record.access_count
-#define server_score_bytes_served(s) s->record.bytes_served
+#define server_score_status(s)          s->record.status
+#define server_score_access_count(s)    s->record.access_count
+#define server_score_bytes_served(s)    s->record.bytes_served
 #define server_score_my_access_count(s) s->record.my_access_count
 #define server_score_my_bytes_served(s) s->record.my_bytes_served
-#define server_score_conn_bytes(s) s->record.conn_bytes
-#define server_score_conn_count(s) s->record.conn_count
-#define server_score_client(s) s->record.client
-#define server_score_request(s) s->record.request
+#define server_score_conn_bytes(s)      s->record.conn_bytes
+#define server_score_conn_count(s)      s->record.conn_count
+#define server_score_client(s)          s->record.client
+#define server_score_request(s)         s->record.request
 
 #define parent_score_pid(s) s->record.pid
 
